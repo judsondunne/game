@@ -4,6 +4,8 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 const path = require("path");
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
@@ -532,7 +534,6 @@ io.on("connection", (socket) => {
 });
 
 const PORT = process.env.PORT || 3001;
-const isProduction = process.env.NODE_ENV === "production";
 httpServer.listen(PORT, () => {
   console.log(`🚀 Game server running on port ${PORT}`);
   console.log(`WebSocket server ready for connections`);
