@@ -1,0 +1,49 @@
+{
+  "name": "monhegan-fictionary",
+  "version": "1.0.0",
+  "description": "A multiplayer word guessing game with a Maine island theme",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "react-scripts start",
+    "build": "react-scripts build",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "socket.io": "^4.7.4",
+    "socket.io-client": "^4.7.4",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
